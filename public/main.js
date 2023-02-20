@@ -5,8 +5,8 @@ update.addEventListener('click', _ => {
       method: 'put',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        name: 'Darth Vader',
-        quote: 'I find your lack of faith disturbing.'
+        name: 'My tow truck',
+        quote: 'I find none in you.'
       })
     })
   })

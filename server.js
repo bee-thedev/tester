@@ -54,9 +54,9 @@ MongoClient.connect(dbConnectionStr, {
       .catch(error => console.error(error))
   })
 
-  app.put('/quotes', (req, res) => {
-    console.log(req.body)
-  })
+  // app.put('/quotes', (req, res) => {
+  //   console.log(req.body)
+  // })
 
   app.put('/quotes', (req, res) => {
     db.collection('gratitudesInput').findOneAndUpdate(
