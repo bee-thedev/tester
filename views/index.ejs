@@ -17,7 +17,7 @@
 <!-- 
     <%= gratitudesInput %> -->
 
-    <ul class="quotes">
+    <ol class="quotes">
         <!-- Loop through quotes -->
         <% for(var i = 0; i < gratitudesInput.length; i++) {%>
           <li class="quote">
@@ -27,7 +27,7 @@
             <span><%= gratitudesInput[i].quote %></span>
           </li>
         <% } %>
-      </ul>
+      </ol>
 
       <div>
         <h2>Darth Vader invades!</h2>
@@ -35,6 +35,15 @@
           Replace first Yoda's quote with a quote written by Darth Vader
         </p>
         <button id="update-button">Replace Yoda's quote</button>
+      </div>
+
+      <div>
+        <h2>Remove Darth Vader!</h2>
+        <p>
+          Delete one Darth Vader's quote. Does nothing if there are no more Darth
+          Vader's quote
+        </p>
+        <button id="delete-button">Delete Darth Vader's quote</button>
       </div>
       <!----------------------- JS ---------------------->
 

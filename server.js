@@ -77,6 +77,19 @@ MongoClient.connect(dbConnectionStr, {
       .catch(error => console.error(error))
   })
 
- app.listen(3000, function() {
-  console.log('listening on 3000')
+  app.delete('/quotes', (req, res) => {
+    db.collection('gratitudesInput').deleteOne(
+      { name: req.body.name }
+    )
+      .then(result => {
+        if (result.deletedCount === 0) {
+          return res.json('No quote to delete')
+        }
+        res.json(`Deleted Gratitude Jar entry`)
+      })
+      .catch(error => console.error(error))
+  })
+
+ app.listen(4000, function() {
+  console.log('listening on 4000')
 })
